@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "e587dca1-23ce-41db-8030-2d0fedfb8d1e",
+		"name": "ShoppingCart Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20453489"
+	},
+	"item": [
+		{
+			"name": "Get All Member",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/shoppingCart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shoppingCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Member By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/shoppingCart/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shoppingCart",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "45890"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Member",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"memberId\": 15789,\r\n        \"memberName\": \"ceny\",\r\n        \"discountCode\": \"無\",\r\n        \"commodities\": [\r\n            {\r\n                \"id\": 65535,\r\n                \"name\": \"Sersian \",\r\n                \"seller\": \"Book\",\r\n                \"price\": 5400,\r\n                \"amount\": 10\r\n            }\r\n            ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shoppingCart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shoppingCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Member",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"memberId\": 45890,\r\n        \"memberName\": \"Wally\",\r\n        \"discountCode\": \"Shopping1111\",\r\n        \"commodities\": [\r\n            {\r\n                \"id\": 45961,\r\n                \"name\": \"cup\",\r\n                \"seller\": \"大台美\",\r\n                \"price\": 100,\r\n                \"amount\": 1\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/shoppingCart/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shoppingCart",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "45890"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Member",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/shoppingCart/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shoppingCart",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
